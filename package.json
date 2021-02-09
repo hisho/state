@@ -2,8 +2,11 @@
   "name": "@hisho/state",
   "version": "1.0.0",
   "description": "A simple state library",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "lint": "eslint --fix 'src/**/*.ts'",
+    "build": "tsc",
     "test": "jest"
   },
   "jest": {

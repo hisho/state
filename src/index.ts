@@ -1,5 +1,1 @@
-import {State} from "./state";
-
-export default {
-  State
-}
+export * from "./state";
