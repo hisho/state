@@ -7,6 +7,7 @@ describe('State', (): void => {
       expect(state).toBeDefined();
       expect(state.getState).toBeDefined();
       expect(state.setState).toBeDefined();
+      expect(state.reset).toBeDefined();
     });
   });
 
@@ -89,6 +90,29 @@ describe('State', (): void => {
       expect(currentState).toEqual({
         initialState: 7,
         test: 'test'
+      });
+    });
+  });
+
+  describe('reset', (): void => {
+    test('numberのstateを5にした後初期値(100)に戻す', (): void => {
+      const state = new State(100);
+      state.setState(5);
+      expect(state.getState).toEqual(5);
+      state.reset();
+      expect(state.getState).toEqual(100);
+    });
+    test('objectのstateを{initialState: 10}にした後初期値{initialState: 2}に戻す', (): void => {
+      const state = new State({
+        initialState: 2
+      });
+      state.setState(prevState => ({...prevState,initialState: 10}));
+      expect(state.getState).toEqual({
+        initialState: 10
+      });
+      state.reset();
+      expect(state.getState).toEqual({
+        initialState: 2
       });
     });
   });
