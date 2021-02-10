@@ -1,4 +1,4 @@
-import {State} from "../src/state";
+import {State} from "../src";
 
 describe('State', (): void => {
   describe('constructor', (): void => {
@@ -8,6 +8,7 @@ describe('State', (): void => {
       expect(state.getState).toBeDefined();
       expect(state.setState).toBeDefined();
       expect(state.reset).toBeDefined();
+      expect(state.on).toBeDefined();
     });
   });
 
