@@ -3,6 +3,7 @@
  */
 export class State<S> {
   private state: S
+  private readonly initialState: S
 
   /**
    * 初期値を受け取ってstateに代入する
@@ -14,6 +15,7 @@ export class State<S> {
     } else {
       this.state = initialState;
     }
+    this.initialState = this.state;
   }
 
   /**
@@ -34,5 +36,12 @@ export class State<S> {
     } else {
       this.state = newState;
     }
+  }
+
+  /**
+   * 現在のstateを初期値に戻す関数
+   */
+  public readonly reset = (): void => {
+    this.state = this.initialState
   }
 }
