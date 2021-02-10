@@ -12,7 +12,7 @@ export class State<S> {
    * 初期値を受け取ってstateに代入する
    * @param initialState 初期値
    */
-  constructor(initialState: (() => S) | S) {
+  constructor(initialState: (S | (() => S))) {
     if (initialState instanceof Function) {
       this.state = initialState();
     } else {
