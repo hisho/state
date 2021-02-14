@@ -4,10 +4,13 @@
   "description": "A simple state library",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "module": "dist/es5/index.js",
   "scripts": {
     "lint": "eslint --fix 'src/**/*.ts'",
     "prebuild": "rimraf dist",
-    "build": "tsc",
+    "build": "run-p 'tsc:*'",
+    "tsc:main": "tsc -p tsconfig.json",
+    "tsc:esm5": "tsc -p tsconfig.es5.json",
     "test": "jest"
   },
   "jest": {
