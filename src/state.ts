@@ -1,5 +1,4 @@
-export type StateOnType = 'subscribe';
-export type StateCallBack = <S>(currentState: S) => void;
+import {StateOnType, StateCallBack} from "./types";
 
 /**
  * 状態を管理するClass
