@@ -1,6 +1,6 @@
 {
   "name": "@hisho/state",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A simple state library",
   "main": "index.ts",
   "scripts": {
