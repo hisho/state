@@ -1,4 +1,4 @@
-import {State} from "../src";
+import {State} from "../index";
 
 describe('State', (): void => {
   describe('constructor', (): void => {

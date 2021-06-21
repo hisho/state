@@ -4,14 +4,16 @@
     "module": "esnext",
     "strict": true,
     "sourceMap": true,
+    "noEmit": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
-    "moduleResolution": "node",
-    "outDir": "./dist",
-    "rootDir": "./src"
+    "moduleResolution": "node"
   },
-  "include": ["src/**/*"],
+  "include": [
+    "index.ts",
+    "src/**/*"
+  ],
   "exclude": ["node_modules"]
 }
