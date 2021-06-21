@@ -1,5 +1,6 @@
 package-lock.json
 .editorconfig
-test/
+tsconfig.json
+__tests__/
 
 .github/
