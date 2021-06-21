@@ -4,7 +4,6 @@
   "description": "A simple state library",
   "main": "index.ts",
   "scripts": {
-    "lint": "eslint --fix 'src/**/*.ts'",
     "test": "jest"
   },
   "jest": {
