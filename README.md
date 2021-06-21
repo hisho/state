@@ -1,7 +1,7 @@
 # STATE
 
 ## Features
-- typescript first
+- typescript files
 
 ## Contents
 
@@ -14,6 +14,18 @@
 
 ```shell script
 $ npm i @hisho/state
+```
+
+### libs
+
+```typescript
+import {State} from '@hisho/state';
+```
+
+### types
+
+```typescript
+import {StateOnType, StateCallBack} from '@hisho/state';
 ```
 
 ## Usage
